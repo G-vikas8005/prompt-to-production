@@ -1,16 +1,13 @@
-# skills.md
-# INSTRUCTIONS: Generate a draft by prompting AI, then manually refine this file.
-# Delete these comments before committing.
-
 skills:
-  - name: [skill_name]
-    description: [One sentence — what does this skill do?]
-    input: [What does it receive? Type and format.]
-    output: [What does it return? Type and format.]
-    error_handling: [What does it do when input is invalid or ambiguous?]
 
-  - name: [second_skill_name]
-    description: [One sentence]
-    input: [Type and format]
-    output: [Type and format]
-    error_handling: [What does it do when input is invalid or ambiguous?]
+name: load_dataset
+description: Reads the ward_budget.csv dataset, validates columns and reports null rows.
+input: CSV file path
+output: Dataset with null row report
+error_handling: Stop execution if file or columns are missing.
+
+name: compute_growth
+description: Computes Month-over-Month growth for a specific ward and category.
+input: Dataset, ward name, category name, growth_type
+output: Per-period growth table
+error_handling: Stop execution if growth_type is missing or data invalid.
